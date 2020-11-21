@@ -139,7 +139,7 @@ def execute():
     
     df_e_transaction_fcab_response = df_e_transaction_fcab_response.select(E_TRANSACTION_FCAB_ORIGINAL_COLUMN_NAMES_2)
     df_e_transaction_fcab_response = df_e_transaction_fcab_response.orderBy(["customer_number","transaction_id"])
-    response_file_name = "CLOUD.80383.LYFCA." + df_e_transaction_fcab_join.select(col("input_filename")).collect()[0][0][:30] + "_SIAResponse.csv"
+    response_file_name = df_e_transaction_fcab_join.select(col("input_filename")).collect()[0][0][:30] + "_SIAResponse.csv"
     
     FileUtility.local_write_csv(df=df_e_transaction_fcab_response,
                                 delimiter=';',

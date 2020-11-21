@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+
+def getSchema():
+    schema_e_nfr_cams = [
+        'appcode',
+        'issuer_id',
+        'customer_company',
+        'product_company',
+        'customer_number',
+        'account_number',
+        'is_customer_number_active',
+        'is_account_number_active',
+        'customer_status',
+        'account_status',
+        'customer_name',
+        'customer_surname',
+        'customer_address',
+        'customer_city',
+        'customer_state',
+        'zip',
+        'country_cod',
+        'date_birth',
+        'home_tel',
+        'work_tel',
+        'taxid_number',
+        'document_type',
+        'city_birth',
+        'gender',
+        'nationality',
+        'email',
+        'input_filename',
+        'input_filename_timestamp',
+        'elaboration_ts',
+        'internallog_ts']
+    return schema_e_nfr_cams
